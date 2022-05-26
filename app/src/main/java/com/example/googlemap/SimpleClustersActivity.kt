@@ -1,5 +1,6 @@
 package com.example.googlemap
 
+import android.annotation.SuppressLint
 import android.location.LocationListener
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -22,13 +23,14 @@ import kotlinx.coroutines.withContext
 import kotlin.random.Random
 
 
-class MapsActivity : AppCompatActivity() {
+class SimpleClustersActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMapsBinding
     private var userList = ArrayList<User>()
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
+    @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -99,7 +101,7 @@ class MapsActivity : AppCompatActivity() {
         val snippet = "and this is the snippet."
 
         // Add ten cluster items in close proximity, for purposes of this example.
-        for (i in 0..50) {
+        for (i in 0..5) {
             val offset = i / 60.0
             lat += offset
             lng += offset

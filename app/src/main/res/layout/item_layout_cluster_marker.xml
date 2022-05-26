@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:contentDescription="@string/cd_cluster">
+
+    <TextView
+        android:id="@+id/singleClusterMarkerSizeTextView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/cluster_background"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

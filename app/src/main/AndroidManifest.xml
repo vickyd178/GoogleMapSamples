@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleMap"
-        tools:targetApi="31">
-
+        tools:targetApi="31" >
+        <activity
+            android:name=".SimpleClustersActivity"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -30,9 +33,9 @@
             android:value="AIzaSyBtPiTpf38q-j7kZTrVni-X0Ub-h8kq6-I" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".custom.CustomClusterActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
